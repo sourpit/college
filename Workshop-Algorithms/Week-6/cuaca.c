@@ -1,15 +1,19 @@
 #include <stdio.h>
 
 int main(void) {
-    int suhu;
+  int suhu = 0;
 
-    scanf("%d", &suhu);
+  scanf("%3d", &suhu);
 
-    if (suhu < 0) {
-        printf("Beku");
-    } else if (suhu >= 0 && suhu <= 20) {
-        printf("Dingin");
-    } else {printf("Hangat");}
+  if (suhu < 0) {
+    printf("Beku\n");
+  }
 
-    return 0;
+  else if(suhu >= 0 && suhu <= 20) {
+    printf("Dingin\n");
+  }
+
+  else printf("Hangat\n");
+
+  return 0;
 }
