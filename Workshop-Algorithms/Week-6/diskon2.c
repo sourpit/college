@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 int main(void) {
-    float diskon, total;
+  float diskon, total;
 
-    scanf("%f", &total);
+  scanf("%f", &total);
 
-    if (total >= 500) {
-        diskon = 0.20;
-    } else if (total >= 200 && total <= 499) {
-        diskon = 0.10;
-    } else if (total < 200) {
-        printf("tidak ada diskon\n");
-    }
+  if (total >= 500) {
+    diskon = 0.20;
+  } else if (total >= 200 && total <= 499) {
+    diskon = 0.10;
+  } else if (total < 200) {
+    printf("tidak ada diskon\n");
+  }
 
-    printf("Total harganya setelah diskon %.3f\n", total * (1 - diskon));
+  printf("Total harganya setelah diskon %.3f\n", total * (1 - diskon));
 
-    return 0;
+  return 0;
 }
