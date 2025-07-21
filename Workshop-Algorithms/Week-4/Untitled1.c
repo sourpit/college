@@ -3,6 +3,7 @@
 int main (void)
 {
   int andi = 3;
+  /* pre-increment operator */
   ++andi;       // Andi naik 1 tangga - 4
   ++andi;       // Andi naik 1 tangga - 5
   ++andi;       // Andi naik 1 tangga - 6

@@ -1,10 +1,17 @@
 #include <stdio.h>
 
-main()
-{
-    int a=23, b=14;
+#define AND(a, b) (a & b)
+#define OR(a, b) (a | b)
+#define XOR(a, b) (a ^ b)
 
-    printf("Manipulasi bit a & b: %d \n", a & b);
-    printf("Manipulasi bit a | b: %d \n", a | b);
-    printf("Manipulasi bit a ^ b: %d \n", a ^ b);
+int main(void)
+{
+  int a = 23, b = 14;
+
+  fprintf(stdout, "Manipulasi bit a & b: %d \n" \
+                  "Manipulasi bit a | b: %d \n" \
+                  "Manipulasi bit a ^ b: %d \n",\
+                  AND(a, b), OR(a, b), XOR(a, b));
+
+  return 0;
 }

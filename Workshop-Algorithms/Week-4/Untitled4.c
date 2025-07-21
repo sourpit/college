@@ -1,8 +1,15 @@
-main()
-{
-    double hargaSabun=10.500, hargaShampoo=15.500;
-    int jSabun=5, jShampoo=10;
+#include <stdio.h>
 
-    double total = (hargaSabun * jSabun) + (hargaShampoo * jShampoo);
-    printf("Harga total nya: %.1f", total);
+int main(void)
+{
+  double harga_sabun=10.500, harga_shampoo=15.500;
+  int jumlah_sabun=5, jumlah_shampoo=10;
+
+  double total = (harga_sabun * jumlah_sabun) + \
+                 (harga_shampoo * jumlah_shampoo);
+
+  printf("Harga total nya: %.1f\n", total);
+
+  /* Program exited successfuly */
+  return 0;
 }

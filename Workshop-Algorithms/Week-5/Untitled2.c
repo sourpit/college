@@ -1,28 +1,41 @@
 #include <stdio.h>
 
+#define GOOD_BUY_STOCK(penjualan) (penjualan >= 100 && penjualan <= 200)
+#define GOOD_EVALUATION(evaluasi) (evaluasi >= 85 && evaluasi <= 90)
+#define GOOD_PRESENCE(presensi) (presensi <= 60)
+#define BAD_PRESENCE(presensi) (presensi >= 60)
+
 int main(void)
 {
-    int penjualan, evaluasi, presensi;
+  int penjualan, evaluasi, presensi;
 
-    printf("Jumlah penjualan: \n");
-    scanf("%d", &penjualan);
+  printf("Jumlah penjualan: \n");
+  scanf("%10d", &penjualan);
 
-    printf("Nilai evaluasi: \n");
-    scanf("%d", &evaluasi);
+  printf("Nilai evaluasi: \n");
+  scanf("%10d", &evaluasi);
 
-    printf("Presensi: \n");
-    scanf("%d", &presensi);
+  printf("Presensi: \n");
+  scanf("%10d", &presensi);
 
-    if ((penjualan >= 100 && penjualan <= 200) && (evaluasi >= 85 && evaluasi <= 90) && presensi <= 60)
-    {
-        printf("Karyawan berkinerja baik");
-    } else if ((penjualan >= 100 && penjualan <= 200) && evaluasi >= 85 && presensi >= 60)
-    {
-        printf("Presensinya tidak bagus");
-    } else if (penjualan >= 200 && evaluasi >= 90 && presensi == 0)
-    {
-        printf("Sangat baik, Naik gaji");
-    };
+  if(GOOD_BUY_STOCK(penjualan) && GOOD_EVALUATION(evaluasi)
+    && GOOD_PRESENCE(presensi)) {
 
-    return 0;
+     printf("Karyawan berkinerja baik\n");
+  }
+
+  else if (GOOD_BUY_STOCK(penjualan) &&
+    GOOD_EVALUATION(evaluasi) && BAD_PRESENCE(presensi)) {
+
+    printf("Presensinya tidak bagus\n");
+  }
+
+  else if (GOOD_BUY_STOCK(penjualan) && GOOD_EVALUATION(evaluasi) &&
+    GOOD_PRESENCE(presensi)) {
+
+    printf("Sangat baik, Naik gaji\n");
+  };
+
+  /* Program exited correctly */
+  return 0;
 }
