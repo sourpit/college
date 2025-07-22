@@ -35,18 +35,22 @@ int main(void) {
     if (age <= 12) {
       price = HARGA_ANAK_ANAK;
       strcpy(gift, "Boneka Panda");
-    } else if (age > 12 && age <= 25) {
+    }
+
+    else if(age > 12 && age <= 25) {
       price = HARGA_MID;
 
       // Gives discount if visitor more than 5
-      if (visitor > 5) {
+      if(visitor > 5) {
         discount = 0.1;
       }
 
-    } else {
+    }
+
+    else {
 
       // Gives discount if visitor more than 2
-      if (visitor > 2) {
+      if(visitor > 2) {
         discount = 0.3;
       }
 
@@ -56,11 +60,15 @@ int main(void) {
     break;
 
   case 2:
-    if (age <= 12) {
+    if(age <= 12) {
       price = TW_ANAK_ANAK;
-    } else if (age > 12 && age <= 25) {
+    }
+
+    else if(age > 12 && age <= 25) {
       price = TW_MID;
-    } else {
+    }
+
+    else {
       price = TW_DEWASA;
       strcpy(gift, "Souvenir Kaos");
     }
@@ -78,7 +86,7 @@ int main(void) {
          "Harga PerOrang\t: \t%d\n",
          ticket, age, visitor, price);
 
-  if (strcmp(gift, "-") != 0) {
+  if (strcmp(gift, "-")) {
     printf("Merchandise\t: \t%s\n", gift);
   } else {
     printf("Merchandise\t: \t-\n");

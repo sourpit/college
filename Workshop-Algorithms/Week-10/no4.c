@@ -50,4 +50,7 @@ int main(void) {
          "Harga setelah diskon: %-6.2f\n",
          jumlah, harga * jumlah,
          (harga * jumlah) * ((harga * jumlah) * ((float)1 - discount)));
+
+  // Exited correctly
+  return 0;
 }

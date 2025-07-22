@@ -5,51 +5,52 @@
 #define TARIFF2 2000
 #define MIN_KWH 100
 
-int main()
+int main(void)
 {
-    int menu, input, tagihan, total;
-    char ulang;
+  int menu, input, tagihan, total;
+  char ulang;
 
-    do {
-        printf("1. Golongan 1\n"
-               "2. Golongan 2\n");
+  do {
+    printf("1. Golongan 1\n"
+           "2. Golongan 2\n");
 
-        scanf("%d", &menu);
+    scanf("%d", &menu);
 
-        switch(menu) {
-        case 1:
-            printf("Berapa Kwh: ");
-            scanf(" %d", &input);
-            if (input <= MIN_KWH) {
-                printf("Tidak mencapai syarat minimum pemakaian\n");
-            } else {
-                tagihan = input * TARIFF1;
-                printf("Tagihan Anda adalah: %d\n", tagihan);
-            }
+    switch(menu) {
+    case 1:
+      printf("Berapa Kwh: ");
+      scanf(" %d", &input);
+      if (input <= MIN_KWH) {
+          printf("Tidak mencapai syarat minimum pemakaian\n");
+      } else {
+          tagihan = input * TARIFF1;
+          printf("Tagihan Anda adalah: %d\n", tagihan);
+      }
 
-            break;
+      break;
 
-        case 2:
-            printf("Berapa Kwh: ");
-            scanf(" %d", &input);
-            if (input <= MIN_KWH) {
-                printf("Tidak mencapai syarat minimum pemakaian\n");
-            } else {
-                 tagihan = input * TARIFF2;
-                printf("Tagihan Anda adalah: %d\n", tagihan);
-            }
-            break;
+    case 2:
+      printf("Berapa Kwh: ");
+      scanf(" %d", &input);
+      if (input <= MIN_KWH) {
+          printf("Tidak mencapai syarat minimum pemakaian\n");
+      } else {
+           tagihan = input * TARIFF2;
+          printf("Tagihan Anda adalah: %d\n", tagihan);
+      }
+      break;
 
-        default:
-            printf("Pilihan tidak valid");
-        }
+    default:
+      printf("Pilihan tidak valid");
+    }
 
-        total = tagihan * (float)0.1;
-        printf("Total pembayaran dengan PPN 10%: %d\n\n"
-               "Apakah anda keperluan yang lain?\n", total);
-               scanf(" %c", &ulang);
+    total = tagihan * (float)0.1;
+    printf("Total pembayaran dengan PPN 10%: %d\n\n"
+           "Apakah anda keperluan yang lain?\n", total);
 
-        system("cls");
+    scanf(" %c", &ulang);
 
-    } while(ulang == 'y');
+    system("cls");
+
+  } while(ulang == 'y');
 }

@@ -29,17 +29,21 @@ int main(void) {
     break;
   }
 
-  if (kwh >= MINIMUM && kwh <= BATAS_WAJAR) {
+  if(kwh >= MINIMUM && kwh <= BATAS_WAJAR) {
     printf("\nAnda bayar: %d\n"
            "Apakah anda ingin melakukan transaksi lain?(y/n): \n",
            kwh * tariff);
     scanf(" %c", &ulang);
-  } else if (kwh < MINIMUM) {
+  }
+
+  else if(kwh < MINIMUM) {
     printf("\nBelum bisa bayar sebelum pemakaian mencapai 100kWh!\n"
            "Apakah anda ingin melakukan transaksi lain?(y/n): \n");
     scanf(" %c", &ulang);
 
-  } else {
+  }
+
+  else {
     printf("\nAnda bayar %d + 10 persen pajak\n"
            "Total: %-6.2f\n\n"
            "Apakah anda ingin melakukan transaksi lain?(y/n): \n",
@@ -48,7 +52,7 @@ int main(void) {
     scanf(" %c", &ulang);
   }
 
-  if (ulang == 'y' || ulang == 'y') {
+  if(ulang == 'y' || ulang == 'y') {
     printf("\e[1;1H\e[2J");
     return main();
   } else {
